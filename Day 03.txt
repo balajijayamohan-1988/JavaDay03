@@ -1,0 +1,353 @@
+Day 3 - 002
+project EmployeeDetails
+package org.emp;
+
+public class Employee { 
+	private void empId(String empName) {
+		System.out.println("Employee name is "+empName);
+	}
+	private void empId(String empEmail) {
+		System.out.println("Employee Email is "+empEmail);
+	}
+	private void empId(int empID) {
+		System.out.println("Employee Id is "+empID);
+	}
+	private void empId(long empPhoneNo) {
+		System.out.println("Employee Phone no is "+empPhoneNo);
+	}
+	private void empId(double empSalary) {
+		System.out.println("Employee Salary is "+empSalary);
+	}
+public static void main(String[] args) {
+	Employee a = new Employee();
+		a.empId("Balaji");
+		a.empId("balaji.jayamohan@gmail.com");
+		a.empId(1234);
+		a.empId(8122215933l);
+		a.empId(130000);
+		
+	
+}	
+}
+	
+run
+Employee name is Balaji
+Employee name is balaji.jayamohan@gmail.com
+Employee Id is 1234
+Employee Phone no is 8122215933
+Employee Id is 130000
+
+Day 3 - 003
+project companyDetails
+package org.company;
+
+public class CompanyInfo {
+	private void companyName(String name,String emailId) {
+		System.out.println("Company name is "+name+ "\nCompany Email ID is "+emailId);
+	}
+	private void companyNmae(int pinCode, long phoneNo) {
+		System.out.println("Company Pincode is "+pinCode +"\nCompany Phone No is "+phoneNo);
+	}	
+public static void main(String[] args) {
+	CompanyInfo a = new CompanyInfo();
+		a.companyName("TCS","tcs@gmail.com");
+		a.companyNmae(609609,8122215933l);
+}	
+}
+run
+Company name is TCS
+Company Email ID is tcs@gmail.com
+Company Pincode is 609609
+Company Phone No is 8122215933
+
+Day3 - 004
+project PhoneDetails
+package org.phone;
+
+public class Phone {
+	private void phoneInfo(String modelName) {
+		System.out.println("Phone model Name is "+modelName);
+	}
+	private void phoneinfo(float phonePrice,int phoneStorage) {
+		System.out.println("Phone price is "+phonePrice+"\tPhone Storage GB is "+phoneStorage);
+	}
+	private void phoneinfo(int phoneStorage,float phonePrice) {
+		System.out.println("Phone Storage GB is "+phoneStorage+"\tPhone price is "+phonePrice);
+	}
+public static void main(String[] args) {
+	Phone a = new Phone();
+	a.phoneInfo("Vivo y17");
+	a.phoneinfo(75000.45f, 126);
+	a.phoneinfo(126, 75000.45f);
+}
+
+}
+run
+Phone model Name is Vivo y17
+Phone price is 75000.45	Phone Storage GB is 126
+Phone Storage GB is 126	Phone price is 75000.45
+
+Day3-005
+project GreensAddress
+package org.add;
+
+public class GreensTech {
+private void greensOmr(String address) {
+	System.out.println("Greens Omr address is "+address);
+	}
+private void greensomr(int pinNo,long phoneNo) {
+	System.out.println("Company pin number is "+pinNo+"\nCompany Phone no is "+phoneNo);
+	}
+private void greensomr(long phoneNo,int pinNo) {
+	System.out.println("Company phone no is "+phoneNo+"\nCompany Phone no is "+pinNo);
+}
+private void greensomr(float salary) {
+	System.out.println("Company Gradual Employee Salary is "+salary);
+}
+public static void main(String[] args) {
+	GreensTech a = new GreensTech();
+		a.greensOmr("108, Thuraipakkam");
+		a.greensomr(609603,8122215933l);
+		a.greensomr(8122215933l,609603);
+		a.greensomr(80000.50f);
+		
+		
+}
+}
+
+run
+Greens Omr address is 108, Thuraipakkam
+Company pin number is 609603
+Company Phone no is 8122215933
+Company phone no is 8122215933
+Company Phone no is 609603
+Company Gradual Employee Salary is 80000.5
+
+Day3 - 006
+project BankDetails	
+package org.bank;
+
+public class BankInfo  {
+	public void saving() {
+		System.out.println("Saving is 4%");
+	}
+	public void fixed() {
+		System.out.println("Fixed is 5%");
+	}
+	public void deposit() {
+		System.out.println("Deposit is 6%");
+	}
+	
+	public static void main(String[] args) {
+		BankInfo a = new BankInfo();
+		a.saving();
+		a.fixed();
+		a.deposit();
+	}
+	
+}
+package org.bank;
+
+public class AxisBank extends BankInfo {
+	@Override
+	public void saving() {
+		System.out.println("Saving is 8%");
+	}
+	@Override
+	public void fixed() {
+		System.out.println("Fixed is 9%");
+	}
+	@Override
+	public void deposit() {
+		System.out.println("Deposit is 10%");
+		}
+public static void main(String[] args) {
+	AxisBank b = new AxisBank();
+		b.saving();
+		b.fixed();
+		b.deposit();
+	}
+}
+run
+Saving is 8%
+Fixed is 9%
+Deposit is 10%
+
+Day 3 - 007
+project	EducationInformation
+package org.edu;
+
+public class Education {
+
+	public void ug() {
+		System.out.println("Here ug Arts,Engineering,Medicine not available");
+	}
+	public void pg() {
+		System.out.println("Here PG Arts,Engineering,Medicine not available");
+	}
+	public static void main(String[] args) {
+		Education a = new Education();
+		a.ug();
+		a.pg();
+				
+	}
+}
+package org.edu;
+
+public class Arts extends Education {
+	public void bse() {
+		System.out.println("Bse Computer Science available");
+	}		
+	public void bEd() {
+		System.out.println("B.ed available");	
+		}
+	public void bA() {
+		System.out.println("BA history available");
+	}
+	public void bBa() {
+		System.out.println("BBA available");
+	}
+	@ Override
+	public void ug() {
+		System.out.println("Here ug Arts,Engineering,Medicine available");
+	}
+	@ Override 
+	public void pg() {
+		System.out.println("Here PG Arts,Engineering,Medicine available");
+	}
+public static void main(String[] args) {
+	Arts b = new Arts();
+		b.bse();
+		b.bEd();
+		b.bA();
+		b.bBa();
+		b.ug();
+		b.pg();
+		
+}	
+}
+
+run
+Bse Computer Science available
+B.ed available
+BA history available
+BBA available
+Here ug Arts,Engineering,Medicine available
+Here PG Arts,Engineering,Medicine available
+
+Day3-008
+project UniversityInformation
+package org.univ;
+
+public class University {
+	public void ug() {
+		System.out.println("Civil,Mech,EEE,EC,IT,CSE available");
+	}
+	public void pg() {
+		System.out.println("Civil,Mech,EEE available");
+	}
+public static void main(String[] args) {
+	University a = new University();
+		a.ug();
+		a.pg();
+		
+}	
+}
+package org.univ;
+
+public class College extends University {
+
+	@Override 
+	public void ug() {
+		System.out.println("IT,CSE available");
+	}
+	@Override
+	public void pg() {
+		System.out.println("Civil,IT,EEE available");
+	}
+	public static void main(String[] args) {
+		College b = new College();
+		b.ug();
+		b.pg();
+				
+	}
+}
+run
+IT,CSE available
+Civil,IT,EEE available
+
+Day3 - 009
+project BikeInformation
+package org.bike;
+//parent
+public interface Bike {
+	void cost();
+	void speed();
+	
+	
+	
+
+}
+package org.bike;
+//child
+public class Ktm implements Bike {
+
+	@Override
+	public void cost() {
+		System.out.println("Bike cost is Rs.125000.00");
+	}
+
+	@Override
+	public void speed() {
+		System.out.println("Bike maximum speed is 200km/hrs");
+		}
+public static void main(String[] args) {
+	Ktm a = new Ktm();
+		a.cost();
+		a.speed();
+	}	
+
+}
+run
+Bike cost is Rs.125000.00
+Bike maximum speed is 200km/hrs
+
+Day3 -010
+project Computer
+package org.computer;
+
+public interface Hardware {
+	void hardwareResources();
+	
+}
+package org.computer;
+
+public interface Software {
+	void softwareResources();
+}
+package org.computer;
+
+public class DeskTop implements Hardware,Software {
+
+	@Override
+	public void softwareResources() {
+		System.out.println("Computer i7 Processor");
+	}
+
+	@Override
+	public void hardwareResources() {
+		System.out.println("All in one mnoditor Dell 15.5in size");
+	}
+public static void main(String[] args) {
+	DeskTop a = new DeskTop();
+		a.softwareResources();
+		a.hardwareResources();
+		
+}		
+}
+run
+Computer i7 Processor
+All in one mnoditor Dell 15.5in size
+
+
+
